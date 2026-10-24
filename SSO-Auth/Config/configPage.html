@@ -227,13 +227,21 @@
                     <span>Enable Authorization by Plugin</span>
                   </label>
                   <div class="fieldDescription checkboxFieldDescription">
-                    Determines if the plugin sets permissions for the user.
+                    Determines if the plugin manages the permissions of users
+                    who sign in through this provider.
                     <br />
-                    If false, the user will start with no permissions and an
-                    administrator will add permissions.
+                    If enabled, the administrator flag, library access and Live
+                    TV permissions are set from this provider's settings and
+                    roles at every login, for existing accounts that are linked
+                    or adopted too. A login that matches no Admin Role removes
+                    the administrator flag, unless Preserve Existing Admin
+                    Permissions is enabled.
                     <br />
-                    The permissions of existing users will not be rewritten on
-                    subsequent logins.
+                    If disabled, the plugin leaves permissions alone: new
+                    accounts get Jellyfin's defaults for new users, and an
+                    administrator manages permissions in Jellyfin.
+                    <br />
+                    Either way, Roles decide who may sign in.
                   </div>
                 </div>
 
